@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>Add Product Form</h1>
+<div mat-dialog-content>
+    <form [formGroup]="productForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Product Name</mat-label>
+            <input matInput placeholder="Name" formControlName="productName">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Product Category</mat-label>
+            <mat-select placeholder="Category" formControlName="Category">
+                <mat-option value="fruits">Fruits </mat-option>
+                <mat-option value="electronics">Electronics</mat-option>
+                <mat-option value="vegetables">Vegetables</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <label for=""><h1>Product State</h1></label>
+        <mat-radio-group formControlName="productState" class="example-radio-group">
+            <mat-radio-button *ngFor="let state of productStateList" class="example-radio-button" [value]="state">
+                {{state}}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-form-field appearance="outline">
+            <mat-label>Price</mat-label>
+            <input matInput formControlName="price" type="number" placeholder="price">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Comment</mat-label>
+            <textarea matInput formControlName="comment" placeholder="comment"></textarea>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+<button mat-raised-button color="warn" mat-dialog-close>Close</button>
+<button mat-raised-button color="primary" style="margin-left: 5px;" (click)="addProduct()">{{actionBtn}}</button>
+</div>

@@ -1,0 +1,50 @@
+{
+  "productList": [
+    {
+      "productName": "Apple",
+      "Category": "fruits",
+      "productState": "Brand New",
+      "price": 110,
+      "comment": "Fresh fruit",
+      "date": "2022-10-18T18:30:00.000Z",
+      "id": 1
+    },
+    {
+      "productName": "Orange",
+      "Category": "fruits",
+      "productState": "Brand New",
+      "price": 125,
+      "comment": "Fresh Fruit",
+      "date": "2022-10-26T18:30:00.000Z",
+      "id": 2
+    },
+    {
+      "productName": "Oneplus nord ce 2 lite",
+      "Category": "electronics",
+      "productState": "Refurbished",
+      "price": 16999,
+      "comment": "Electronic gadget",
+      "date": "2022-10-11T18:30:00.000Z",
+      "id": 3
+    },
+    {
+      "productName": "MacBook pro",
+      "Category": "electronics",
+      "productState": "Brand New",
+      "price": 92000,
+      "comment": "Electronic Gadget",
+      "date": "2022-09-30T18:30:00.000Z",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
